@@ -10,9 +10,13 @@ class Solution:
         # Base case: left or right node is empty
         # Add 1 to depth for every node down the path
         def find_depth(root, depth):
-            if not root:
-                return depth
-            else:
-                return max(find_depth(root.left, depth+1), find_depth(root.right, depth+1))
-        
+            return (
+                max(
+                    find_depth(root.left, depth + 1),
+                    find_depth(root.right, depth + 1),
+                )
+                if root
+                else depth
+            )
+
         return find_depth(root, 0)

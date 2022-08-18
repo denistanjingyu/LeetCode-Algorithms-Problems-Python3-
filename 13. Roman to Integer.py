@@ -10,10 +10,10 @@ class Solution:
             "D": 500,
             "M": 1000
         }
-        
+
         # Define a variable to store the integer
         integer = 0
-        
+
         # Loop through s till second last character
         # For each character, compare to next character (minus if less, add if more)
         for i in range(len(s) - 1):
@@ -21,6 +21,6 @@ class Solution:
                 integer -= roman[s[i]]
             else:
                 integer += roman[s[i]]
-        
+
         # Last character is always added as it can never be less than non-existent "next"
         return integer + roman[s[-1]]

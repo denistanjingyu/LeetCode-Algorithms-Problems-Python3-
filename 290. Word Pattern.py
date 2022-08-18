@@ -5,7 +5,7 @@ class Solution:
 
         if len(pattern) != len(words):
             return False
-        
+
         # For the case w = ['dog', 'cat'] and p = 'aa'
         if len(set(pattern)) != len(set(words)):
             return False 

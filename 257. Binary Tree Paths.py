@@ -8,8 +8,11 @@ class Solution:
     def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
         if not root: 
             return []
-        
-        if not root.left and not root.right: 
-            return [str(root.val)]
-        
-        return [str(root.val) + '->' + i for i in self.binaryTreePaths(root.left)] + [str(root.val) + '->' + i for i in self.binaryTreePaths(root.right)]    
+
+        if root.left or root.right:
+            return [
+                f'{str(root.val)}->{i}' for i in self.binaryTreePaths(root.left)
+            ] + [f'{str(root.val)}->{i}' for i in self.binaryTreePaths(root.right)]
+
+        else: 
+            return [str(root.val)]    

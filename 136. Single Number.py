@@ -6,7 +6,7 @@ class Solution:
                 dict_nums[i] = 1
             else:
                 dict_nums[i] += 1
-        
+
         for num, count in dict_nums.items():
             if count == 1:
                 return num

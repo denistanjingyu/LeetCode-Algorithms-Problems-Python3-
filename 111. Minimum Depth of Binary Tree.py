@@ -9,15 +9,15 @@ class Solution:
         # Return 0 if empty tree
         if not root:
             return 0
-        
+
         depth = 0
         current_level = [root]
-        
+
         # Breadth-first search
         while current_level:
             depth += 1
             next_level = []
-            
+
             for node in current_level:
                 left, right = node.left, node.right
                 if not left and not right:
@@ -27,5 +27,5 @@ class Solution:
                 if right:
                     next_level.append(right)
             current_level = next_level
-            
+
         return depth

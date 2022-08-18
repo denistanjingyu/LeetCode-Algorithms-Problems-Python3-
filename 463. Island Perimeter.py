@@ -4,8 +4,8 @@ class Solution:
         h, w = len(grid), len(grid[0])
 
         # Iterate through each cell
-        for row in range(0, h):
-            for col in range(0, w):
+        for row in range(h):
+            for col in range(w):
 
                 # Is this a land cell?
                 if grid[row][col] == 1:

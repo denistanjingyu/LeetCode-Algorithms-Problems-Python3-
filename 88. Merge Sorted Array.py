@@ -18,4 +18,4 @@ class Solution:
                 n -= 1
 
         if n > 0:
-            nums1[0:n] = nums2[0:n]
+            nums1[:n] = nums2[:n]
